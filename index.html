@@ -58,12 +58,21 @@ footer { text-align:center; padding:20px; color:#777; }
 <p>LinkedIn: <a href="#">Add your LinkedIn link here</a></p>
 <br>
 <input type="email" placeholder="Your Email">
-<button>Send</button>
+<button onclick="sendMessage()">Send</button>
 </section>
 
 <footer>
 Made with ❤️ by Rajnee | 2026
 </footer>
-
+<script>
+function sendMessage() {
+  let email = document.querySelector('input').value;
+  if(email == "") {
+    alert("Arre email tar tak Rajnee! 😅");
+  } else {
+    alert("WOW! " + email + " - Message sent! Mi lavkarach contact karen! ❤️");
+  }
+}
+</script>
 </body>
 </html>
