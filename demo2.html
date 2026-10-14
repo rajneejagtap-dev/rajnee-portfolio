@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { background:#ffebf0; font-family:Arial; text-align:center; }
+  .card {
+    background:white; width:300px; margin:50px auto; padding:20px;
+    border-radius:15px; box-shadow:0px 4px 15px gray;
+    animation: floatUp 1s ease-out;
+    transition: transform 0.3s;
+  }
+  .card:hover { transform: translateY(-10px) scale(1.03); }
+  img {
+    width:150px; height:150px; border-radius:50%; object-fit:cover;
+    transition: transform 0.4s;
+  }
+  img:hover { transform: scale(1.1) rotate(5deg); }
+  button {
+    background:#ff4d79; color:white; border:none;
+    padding:10px 20px; border-radius:20px; cursor:pointer;
+    transition: transform 0.2s;
+    animation: pulse 2s infinite;
+  }
+  button:hover { transform: scale(1.1); }
+  @keyframes floatUp {
+    from { opacity:0; transform: translateY(30px); }
+    to { opacity:1; transform: translateY(0); }
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 #ff4d79; }
+    70% { box-shadow: 0 0 0 10px rgba(255,77,121,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,77,121,0); }
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <img src="image.jpg.jpeg">
+  <h2>RAJNEEGANDHA</h2>
+  <p>WelCome to my Profile</p>
+  <a href="https://www.instagram.com/rajneegandhajagtap_nigade" target="_blank" style="text-decoration:none;">
+    <button>contact me</button>
+  </a>
+</div>
+</body>
+</html>
