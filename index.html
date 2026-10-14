@@ -1,78 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>RAJNEEGANDHA - Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAJNEECGANDHA - Portfolio</title>
 <style>
-body { font-family: Arial, sans-serif; margin:0; background:#f8f9ff; color:#333; }
-header { background: linear-gradient(135deg, #667eea, #764ba2); color:white; padding:60px 20px; text-align:center; }
+body { font-family: Arial; margin:0; background:#f4f6f9; }
+header { background: linear-gradient(135deg, #667eea, #764ba2); color:white; text-align:center; padding:60px 20px; }
 header h1 { margin:0; font-size:40px; }
-header p { font-size:18px; opacity:0.9; }
-nav { margin-top:20px; }
-nav a { color:white; margin:0 10px; text-decoration:none; font-weight:bold; border:1px solid white; padding:8px 15px; border-radius:20px; }
-nav a:hover { background:white; color:#764ba2; }
-section { max-width:800px; margin:40px auto; background:white; padding:30px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
-h2 { color:#764ba2; }
-.skill { background:#f0f0ff; display:inline-block; padding:8px 15px; border-radius:20px; margin:5px; font-weight:bold; }
-input, button { padding:10px; border-radius:8px; border:1px solid #ccc; }
-button { background:#764ba2; color:white; border:none; cursor:pointer; padding:10px 20px; }
-button:hover { background:#667eea; }
+.container { max-width:900px; margin: -40px auto 0; padding:20px; }
+.card { background:white; padding:25px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); margin-bottom:20px; }
+.card h2 { color:#4a4e9c; }
+.skills { display:flex; flex-wrap:wrap; gap:10px; }
+.skill { background:#eef0ff; padding:8px 15px; border-radius:20px; font-weight:bold; transition:0.3s; cursor:pointer; }
+.skill:hover { background:#764ba2; color:white; transform:scale(1.1); }
+input { padding:10px; border-radius:5px; border:1px solid #ccc; width:200px; }
+button { background:#667eea; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; margin-left:10px; }
 footer { text-align:center; padding:20px; color:#777; }
-  .skill:hover {
-  background: #764ba2;
-  color: white;
-  transform: scale(1.1);
-  transition: 0.3s;
 </style>
 </head>
 <body>
-
 <header>
-<h1>RAJNEEGANDHA</h1>
-<p>Aspiring MERN Stack Developer from Pune</p>
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</nav>
+<h1>Rajnee Gandha</h1>
+<p>Aspiring MERN Stack Developer | Learning Web Development</p>
 </header>
 
-<section id="about">
+<div class="container">
+<div class="card">
 <h2>About Me</h2>
-<p>I am a Computer Science student passionate about web development. I am learning to build modern, responsive websites using MERN stack. From Pune, dreaming big!</p>
-</section>
+<p>Hello! I'm Rajnee, passionate about coding and building amazing websites. Currently learning HTML, CSS, JavaScript and aiming to become a MERN Stack Developer.</p>
+</div>
 
-<section id="skills">
+<div class="card">
 <h2>My Skills</h2>
+<div class="skills">
 <span class="skill">HTML</span>
 <span class="skill">CSS (Learning)</span>
 <span class="skill">JavaScript (Learning)</span>
 <span class="skill">MERN Stack (Goal)</span>
 <span class="skill">Git & GitHub</span>
-</section>
+</div>
+</div>
 
-<section id="contact">
+<div class="card">
 <h2>Contact Me</h2>
 <p>Let's connect and build something amazing!</p>
 <p>Email: <b>rajneejagtap@gmail.com</b></p>
-<p>LinkedIn: <a href="#">Add your LinkedIn link here</a></p>
-<br>
-<input type="email" placeholder="Your Email">
+<input type="email" id="emailInput" placeholder="Your Email">
 <button onclick="sendMessage()">Send</button>
-</section>
+</div>
+</div>
 
-<footer>
-Made with ❤️ by Rajnee | 2026
-</footer>
+<footer>Made with ❤️ by Rajnee</footer>
+
 <script>
 function sendMessage() {
-  let email = document.querySelector('input').value;
+  let email = document.getElementById('emailInput').value;
   if(email == "") {
-    alert("Arre email tar tak Rajnee! 😅");
+    alert("Arre email tar tak! 😅");
   } else {
-    alert("WOW! " + email + " - Message sent! Mi lavkarach contact karen! ❤️");
+    alert("Thank you " + email + "! Message sent successfully! 🚀");
+    document.getElementById('emailInput').value = "";
   }
 }
 </script>
+
 </body>
 </html>
